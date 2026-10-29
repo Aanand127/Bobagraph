@@ -1,0 +1,35 @@
+=== REAL TOOL CALL EVIDENCE ===
+Date: Thu Oct 29 19:32:18 UTC 2026
+Graph: /Users/asuryavanshi/Downloads/Projects/BobathonGraphify/example_repo/graphify-out/graph.json
+
+--- [graphify server] tools/list ---
+tools (10): ['query_graph', 'get_node', 'get_neighbors', 'get_community', 'god_nodes', 'graph_stats', 'shortest_path', 'list_prs', 'get_pr_impact', 'triage_prs']
+
+--- [graphify server] graph_stats ---
+Nodes: 160
+Edges: 354
+Communities: 15
+EXTRACTED: 92%
+INFERRED: 8%
+AMBIGUOUS: 0%
+
+
+--- [graphify server] query_graph: 'what calls apply_discount' ---
+Graph: example_repo/graphify-out/graph.json (160 nodes) | Traversal: BFS depth=3 | Start: ['apply_discount()', 'apply_tax()', 'Apply a voucher to an order if valid.', 'get_discount()'] | Context: call (heuristic) | 26 nodes found
+
+[i] Complete answer over budget: all 26 nodes and 24 edges shown (~1634 tokens vs the requested ~800-token budget). Edges are never dropped once every node fits, so this is already the full answer — raising --budget further will not shrink it. Narrow with context_filter=['call'] or use get_node for a specific symbol to reduce size instead.
+
+NODE apply_discount() [src=pricing/rules.py loc=L30 community=test_pricing.py]
+NODE apply_tax() [src=pricing/rules.py loc=L36 community=test_pricing.py]
+NODE Apply a voucher to an order if valid. [src=orders/service.py loc=L51 community=OrderService]
+NODE get_discount() [src=pricing/rules.py loc=L20 community=test_pricing.py]
+NODE calculate_item_price() [src=pricing/rules.py loc=L42 community=test_pricing.py]
+NODE get_tax_rate() [src=pricing/rules.py loc=L25 community=test_pricing.py]
+NODE test_apply_discount_gold_reduces_price() [src=tests/test_pricing.py loc=L43 community=test_pricing.py]
+NODE test_apply_discount_sta
+
+--- [bobagraph server] change_brief: pricing/rules.py + orders/service.py ---
+affected_nodes: 28
+communities_touched: [0, 1, 2, 3, 4]
+high_degree_nodes[0]: {'label': 'OrderService', 'source_file': 'orders/service.py', 'degree': 21}
+summary: 28 graph node(s) are defined in the changed file(s): pricing/rules.py, orders/service.py. They touch 5 community/communities (0, 1, 2, 3, 4). The highest-degree affected node is 'OrderService' (degree 21). Review callers and importers of the top-degree nodes for ripple effects.

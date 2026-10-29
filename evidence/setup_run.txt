@@ -1,0 +1,123 @@
+=== PACKAGED SETUP RUN (clean, v3) ===
+Date: Thu Oct 29 19:29:36 UTC 2026
+
+[notice] A new release of pip is available: 26.2.1 -> 26.2.2
+[notice] To update, run: /Users/asuryavanshi/Downloads/Projects/BobathonGraphify/bobagraph-env/bin/python -m pip install --upgrade pip
+[graphify extract] incremental scan of /Users/asuryavanshi/Downloads/Projects/BobathonGraphify/example_repo
+[graphify extract] 0 code, 0 docs, 0 papers, 0 images changed; 19 unchanged; 0 deleted
+[graphify extract] wrote /Users/asuryavanshi/Downloads/Projects/BobathonGraphify/example_repo/graphify-out/graph.json: 160 nodes, 354 edges, 15 communities
+[graphify extract] wrote /Users/asuryavanshi/Downloads/Projects/BobathonGraphify/example_repo/graphify-out/.graphify_analysis.json
+[graphify extract] incremental summary: 19 files cached/unchanged, 0 re-extracted, 0 deleted
+[graphify extract] next: run `graphify cluster-only /Users/asuryavanshi/Downloads/Projects/BobathonGraphify/example_repo` to generate GRAPH_REPORT.md and name communities
+Loading existing graph...
+Graph: 160 nodes, 354 edges
+Re-clustering...
+Done - 15 communities. GRAPH_REPORT.md, graph.json and graph.html updated.
+[bobagraph] Installing Bobagraph for: /Users/asuryavanshi/Downloads/Projects/BobathonGraphify/example_repo
+[bobagraph] Creating virtual environment at /Users/asuryavanshi/Downloads/Projects/BobathonGraphify/bobagraph-env …
+[bobagraph] Installing graphifyy[mcp] (pinned) …
+[bobagraph] Running graphify extract (code-only, no LLM) …
+[bobagraph] Running graphify cluster-only (generates graph.html and GRAPH_REPORT.md) …
+[bobagraph] Graph built: /Users/asuryavanshi/Downloads/Projects/BobathonGraphify/example_repo/graphify-out/graph.json
+[bobagraph] Fingerprint saved (strategy: mtime_ns+size, SHA-256): bcb26daaed97db8a…
+[bobagraph] Wrote .bob/mcp.json — merged 'graphify' and 'bobagraph' server entries
+
+[bobagraph] Setup complete.
+
+  Next steps:
+    1. Open Bob in this directory: /Users/asuryavanshi/Downloads/Projects/BobathonGraphify
+    2. In Bob Settings → MCP tab → 'Edit Project MCP'
+       Bob will auto-detect .bob/mcp.json; if not, click 'Reload MCP Servers'.
+    3. Try in Bob: 'What are the most connected nodes in the codebase?'
+    4. Or: 'Run change_brief for orders/service.py and pricing/rules.py'
+    5. Visual graph: open /Users/asuryavanshi/Downloads/Projects/BobathonGraphify/example_repo/graphify-out/graph.html in any browser
+    6. Refresh after code changes:
+       python bobagraph_setup.py refresh /Users/asuryavanshi/Downloads/Projects/BobathonGraphify/example_repo
+    7. Check staleness:
+       python bobagraph_setup.py status /Users/asuryavanshi/Downloads/Projects/BobathonGraphify/example_repo
+
+
+=== POST-INSTALL STATE ===
+bobagraph-env/: YES
+.bob/mcp.json:  YES
+
+=== .bob/mcp.json ===
+{
+  "mcpServers": {
+    "graphify": {
+      "command": "/Users/asuryavanshi/Downloads/Projects/BobathonGraphify/bobagraph-env/bin/python",
+      "args": [
+        "-m",
+        "graphify.serve",
+        "--graph",
+        "/Users/asuryavanshi/Downloads/Projects/BobathonGraphify/example_repo/graphify-out/graph.json",
+        "--transport",
+        "stdio"
+      ],
+      "env": {
+        "GRAPHIFY_BACKEND": "none",
+        "GRAPHIFY_QUERY_LOG_DISABLE": "1"
+      },
+      "cwd": "/Users/asuryavanshi/Downloads/Projects/BobathonGraphify/example_repo"
+    },
+    "bobagraph": {
+      "command": "/Users/asuryavanshi/Downloads/Projects/BobathonGraphify/bobagraph-env/bin/python",
+      "args": [
+        "-m",
+        "bobagraph.server"
+      ],
+      "env": {
+        "PYTHONPATH": "/Users/asuryavanshi/Downloads/Projects/BobathonGraphify"
+      },
+      "cwd": "/Users/asuryavanshi/Downloads/Projects/BobathonGraphify"
+    }
+  }
+}
+=== STATUS COMMAND ===
+Repository : /Users/asuryavanshi/Downloads/Projects/BobathonGraphify/example_repo
+Graph path : /Users/asuryavanshi/Downloads/Projects/BobathonGraphify/example_repo/graphify-out/graph.json
+Graph exists: True
+Graph size : 134,489 bytes
+Graph mtime: 2026-10-29T19:29:43Z
+Nodes      : 160
+Links      : 354
+Built at   : 2026-10-29T19:29:43Z
+Fingerprint: bcb26daaed97db8a…
+Strategy   : mtime_ns+size per code file, SHA-256 over sorted entries
+Staleness  : FRESH
+
+Bob config : /Users/asuryavanshi/Downloads/Projects/BobathonGraphify/.bob/mcp.json (exists)
+  Our entries  : ['graphify', 'bobagraph']
+  Other entries: []
+
+=== IDEMPOTENT RE-RUN ===
+[bobagraph] Installing Bobagraph for: /Users/asuryavanshi/Downloads/Projects/BobathonGraphify/example_repo
+[bobagraph] Virtual environment already exists at /Users/asuryavanshi/Downloads/Projects/BobathonGraphify/bobagraph-env
+[bobagraph] Installing graphifyy[mcp] (pinned) …
+[bobagraph] Running graphify extract (code-only, no LLM) …
+[bobagraph] Running graphify cluster-only (generates graph.html and GRAPH_REPORT.md) …
+[bobagraph] Graph built: /Users/asuryavanshi/Downloads/Projects/BobathonGraphify/example_repo/graphify-out/graph.json
+[bobagraph] Fingerprint saved (strategy: mtime_ns+size, SHA-256): bcb26daaed97db8a…
+[bobagraph] Wrote .bob/mcp.json — merged 'graphify' and 'bobagraph' server entries
+[bobagraph] Setup complete.
+  Next steps:
+    1. Open Bob in this directory: /Users/asuryavanshi/Downloads/Projects/BobathonGraphify
+    2. In Bob Settings → MCP tab → 'Edit Project MCP'
+       Bob will auto-detect .bob/mcp.json; if not, click 'Reload MCP Servers'.
+    3. Try in Bob: 'What are the most connected nodes in the codebase?'
+    4. Or: 'Run change_brief for orders/service.py and pricing/rules.py'
+    5. Visual graph: open /Users/asuryavanshi/Downloads/Projects/BobathonGraphify/example_repo/graphify-out/graph.html in any browser
+    6. Refresh after code changes:
+       python bobagraph_setup.py refresh /Users/asuryavanshi/Downloads/Projects/BobathonGraphify/example_repo
+    7. Check staleness:
+       python bobagraph_setup.py status /Users/asuryavanshi/Downloads/Projects/BobathonGraphify/example_repo
+
+=== MERGE PRESERVATION TEST ===
+Injected other-tool entry
+[bobagraph] Running graphify cluster-only (generates graph.html and GRAPH_REPORT.md) …
+[bobagraph] Graph built: /Users/asuryavanshi/Downloads/Projects/BobathonGraphify/example_repo/graphify-out/graph.json
+[bobagraph] Fingerprint saved (strategy: mtime_ns+size, SHA-256): bcb26daaed97db8a…
+[bobagraph] Wrote .bob/mcp.json — merged 'graphify' and 'bobagraph' server entries
+[bobagraph] Setup complete.
+Checking other-tool survived:
+other-tool: present

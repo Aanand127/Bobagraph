@@ -1,0 +1,57 @@
+========================================
+VERIFICATION BEFORE COMPLETION — PASS 2
+========================================
+
+1. All tests pass (target: 77 = 37 example + 18 change_brief + 18 mcp + 10 fingerprint - 6 old)
+........................................................................ [ 86%]
+...........                                                              [100%]
+83 passed in 0.66s
+
+2. bobagraph_setup.py status shows FRESH
+Nodes      : 160
+Built at   : 2026-10-29T19:29:59Z
+Fingerprint: bcb26daaed97db8a…
+Staleness  : FRESH
+
+3. Malformed .bob/mcp.json rejected clearly (not silently replaced)
+  Fix or delete it manually, then re-run setup.
+PASS: sys.exit called on malformed JSON (exit 1 )
+
+[notice] A new release of pip is available: 26.2.1 -> 26.2.2
+[notice] To update, run: /Users/asuryavanshi/Downloads/Projects/BobathonGraphify/bobagraph-env/bin/python -m pip install --upgrade pip
+
+4. Path traversal blocked
+  isError: True | msg: path traversal not allowed in changed_files entry: '../../..
+
+5. Relative graph_path blocked
+  isError: True | msg: graph_path must be absolute, got: 'relative/graph.json'
+
+6. bobagraph://usage resource contains workflow guidance
+  PASS
+Length: 2711 chars
+
+7. .bob/mcp.json has correct entrypoint args
+PASS: graphify args: ['-m', 'graphify.serve', '--graph', '/Users/asuryavanshi/Downloads/Projects/BobathonGraphify/example_repo/graphify-out/graph.json', '--transport', 'stdio']
+PASS: bobagraph env PYTHONPATH: /Users/asuryavanshi/Downloads/Projects/BobathonGraphify
+
+8. Uninstall removes only our entries, preserves others
+[bobagraph] Removed entries from .bob/mcp.json: ['graphify', 'bobagraph']
+[bobagraph] Removing virtual environment: /Users/asuryavanshi/Downloads/Projects/BobathonGraphify/bobagraph-env
+[bobagraph] Uninstall complete. Your source repository and unrelated Bob settings are untouched.
+PASS: our entries removed, other entry preserved
+
+9. After uninstall, re-install succeeds (idempotent)
+[bobagraph] Graph built: /Users/asuryavanshi/Downloads/Projects/BobathonGraphify/example_repo/graphify-out/graph.json
+[bobagraph] Fingerprint saved (strategy: mtime_ns+size, SHA-256): bcb26daaed97db8a…
+[bobagraph] Wrote .bob/mcp.json — merged 'graphify' and 'bobagraph' server entries
+[bobagraph] Setup complete.
+
+10. Stdout of bobagraph server is clean JSON only
+  PASS: stdout is clean JSON
+
+11. No personal skill paths in any shipped file
+  PASS: no personal skill paths
+
+========================================
+ALL VERIFICATION CHECKS COMPLETE
+========================================

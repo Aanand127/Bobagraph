@@ -1,0 +1,29 @@
+Bobagraph
+Copyright 2026 Bobagraph contributors.
+
+This product is licensed under the Apache License, Version 2.0 (see LICENSE).
+
+---
+
+This product includes or depends on the graphify project:
+
+  Graphify
+  Copyright 2026 Safi Shamsi and the Graphify contributors.
+  https://github.com/Graphify-Labs/graphify
+  Licensed under the Apache License, Version 2.0.
+  Portions contributed under the MIT License prior to relicensing;
+  original MIT license text available at upstream commit 0a8cd4e1.
+
+Bobagraph installs graphify as a dependency and does not modify or
+redistribute its source code.  The graphify engine, MCP server
+(graphify-mcp), extraction pipeline (~40-language tree-sitter AST),
+graph format, and visualization (graph.html) are works of the graphify
+contributors.  "graphify" and the graphify logo are marks of Graphify Labs.
+Bobagraph is community-built and is not affiliated with or endorsed by
+Graphify Labs.
+
+Bobagraph's original contributions:
+  - setup.py: automated install, graph build, and Bob MCP config generation
+  - bobagraph/change_brief.py: change impact analysis from graph.json
+  - bobagraph/server.py: MCP stdio server exposing change_brief
+  - Usage guidance embedded in the generated Bob configuration

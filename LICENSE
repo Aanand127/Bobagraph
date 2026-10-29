@@ -1,0 +1,34 @@
+                                 Apache License
+                           Version 2.0, January 2004
+                        http://www.apache.org/licenses/
+
+   Copyright 2026 Bobagraph contributors
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+
+   ---
+
+   This product includes software from the graphify project
+   (https://github.com/Graphify-Labs/graphify), licensed under the
+   Apache License, Version 2.0.  The original Apache 2.0 license text
+   for graphify is reproduced in NOTICE.  Portions of graphify were
+   contributed under the MIT License prior to its relicensing; the
+   original MIT license text is available in graphify's LICENSE-MIT file
+   at the pinned upstream commit.
+
+   graphify is NOT modified or redistributed by Bobagraph.  Bobagraph
+   installs graphify as a runtime dependency from PyPI/git.  The graphify
+   engine, MCP server, extraction pipeline, and graph format are upstream
+   works; Bobagraph's original contribution is the setup automation,
+   Bob configuration generation, usage instructions, and the change_brief
+   tool (bobagraph/change_brief.py and bobagraph/server.py).

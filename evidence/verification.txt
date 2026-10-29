@@ -1,0 +1,91 @@
+=== FULL VERIFICATION RUN ===
+Date: Thu Oct 29 19:14:42 UTC 2026
+
+--- All 67 tests ---
+...................................................................      [100%]
+67 passed in 0.44s
+
+--- graphify-mcp tools count ---
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+    import sys,json; d=json.loads(sys.stdin.read().strip().split('\n')[-1]); print('graphify-mcp tools:', len(d['result']['tools']), [t['name'] for t in d['result']['tools']])
+                                                                                                              ~^^^^^^^^^^
+KeyError: 'result'
+
+--- bobagraph-server tools count ---
+bobagraph tools: 1 ['change_brief']
+
+--- Project file tree ---
+.
+./.pytest_cache
+./.pytest_cache/.gitignore
+./.pytest_cache/CACHEDIR.TAG
+./.pytest_cache/README.md
+./.pytest_cache/v
+./.pytest_cache/v/cache
+./.pytest_cache/v/cache/lastfailed
+./.pytest_cache/v/cache/nodeids
+./.venv
+./LICENSE
+./NOTICE
+./README.md
+./bobagraph
+./bobagraph/__init__.py
+./bobagraph/__pycache__
+./bobagraph/change_brief.py
+./bobagraph/server.py
+./bobagraph/tests
+./bobagraph/tests/__init__.py
+./bobagraph/tests/__pycache__
+./bobagraph/tests/test_change_brief.py
+./bobagraph/tests/test_mcp_server.py
+./evidence
+./evidence/build_evidence.txt
+./evidence/verification.txt
+./example_repo
+./example_repo/__init__.py
+./example_repo/__pycache__
+./example_repo/api
+./example_repo/api/__init__.py
+./example_repo/api/__pycache__
+./example_repo/api/handlers.py
+./example_repo/graphify-out
+./example_repo/graphify-out/.graphify_analysis.json
+./example_repo/graphify-out/.graphify_labels.json
+./example_repo/graphify-out/.graphify_labels.json.sig
+./example_repo/graphify-out/.graphify_root
+./example_repo/graphify-out/GRAPH_REPORT.md
+./example_repo/graphify-out/cache
+./example_repo/graphify-out/graph.html
+./example_repo/graphify-out/graph.json
+./example_repo/graphify-out/manifest.json
+./example_repo/notifications
+./example_repo/notifications/__init__.py
+./example_repo/notifications/sender.py
+./example_repo/orders
+./example_repo/orders/__init__.py
+./example_repo/orders/__pycache__
+./example_repo/orders/service.py
+./example_repo/orders/summary.py
+./example_repo/pricing
+./example_repo/pricing/__init__.py
+./example_repo/pricing/__pycache__
+./example_repo/pricing/rules.py
+./example_repo/pricing/vouchers.py
+./example_repo/storage
+./example_repo/storage/__init__.py
+./example_repo/storage/__pycache__
+./example_repo/storage/models.py
+./example_repo/storage/repository.py
+./example_repo/tests
+./example_repo/tests/__init__.py
+./example_repo/tests/__pycache__
+./example_repo/tests/test_api.py
+./example_repo/tests/test_orders.py
+./example_repo/tests/test_pricing.py
+./example_repo/tests/test_vouchers.py
+./pyproject.toml
+./requirements.lock.txt
+./setup.py
+graphify-mcp name: None   protocol: None
+graphify-mcp tools (10): ['query_graph', 'get_node', 'get_neighbors', 'get_community', 'god_nodes', 'graph_stats', 'shortest_path', 'list_prs', 'get_pr_impact', 'triage_prs']

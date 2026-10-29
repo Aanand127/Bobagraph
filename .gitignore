@@ -1,0 +1,28 @@
+# Virtual environments
+.venv/
+bobagraph-env/
+
+# Python bytecode
+__pycache__/
+*.pyc
+*.pyo
+
+# Pytest cache
+.pytest_cache/
+
+# Graphify output (machine-generated; each user runs setup.py)
+example_repo/graphify-out/
+
+# Bob MCP config (contains machine-specific absolute paths)
+.bob/mcp.json
+
+# Build artifacts
+dist/
+build/
+*.egg-info/
+
+# Build artifacts (ZIP)
+*.zip
+
+# Workspace-level graphify scan (generated on demand; not the example_repo output)
+graphify-out/

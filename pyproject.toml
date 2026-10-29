@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=70"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bobagraph"
+version = "0.1.0"
+description = "Bobagraph — Bob + Graphify integration with change impact analysis"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "Apache-2.0"}
+# graphifyy[mcp] is intentionally not listed here so that setup.py controls
+# the pinned commit. Users who install via pip directly should follow README.md.
+dependencies = []
+
+[project.scripts]
+bobagraph-server = "bobagraph.server:main"
+
+[tool.setuptools.packages.find]
+include = ["bobagraph*"]
+
+[tool.pytest.ini_options]
+testpaths = ["bobagraph/tests", "example_repo/tests"]
